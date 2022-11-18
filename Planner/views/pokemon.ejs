@@ -1,0 +1,32 @@
+<!-- Header -->
+
+
+<!-- Main Content -->
+<main>
+    <div class="container">
+        <div class ="row">
+            <div class ="col-mid-offset-3 col-md-6">
+            <h1><%= title %></h1>
+            <br>
+            <table class = "table table-bordered table-striped table-hover">
+        <tr>
+        <th class="text-center">Name</th>
+        <th class="text-center">Type1</th>
+        <th class="text-center">Type2</th>
+        <th class="text-center">Weight</th>
+        <th class="text-center">Price</th>
+        </tr>
+        <% for(let count= 0;count<Pokemonlist.length; count++) { %>
+            <tr>
+                <td class="text-center"><%= Pokemonlist[count].name %></td>
+                <td class="text-center"><%= Pokemonlist[count].type1 %></td>
+                <td class="text-center"><%= Pokemonlist[count].type2 %></td>
+                <td class="text-center"><%= Pokemonlist[count].weight %></td>
+                <td class="text-center"><%= Pokemonlist[count].height %></td>
+            </tr>
+        <% } %>
+            </table>
+        </div>
+    </div>
+</main>
+<!-- Footer -->
