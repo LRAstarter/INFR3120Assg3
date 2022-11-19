@@ -1,0 +1,82 @@
+<!-- Header -->
+<!-- Bootstrap navbar -->
+<link rel="stylesheet" href="/bootstrap/dist/css/bootstrap.min.css"/>
+<link rel="stylesheet" href="/stylesheets/monStyle.css"/>
+<nav class="navbar navbar-expand-lg " style ="background-color: #f4000f;">
+  <div class="container-fluid">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-link active" aria-current="page" href="/pokemon-list">Home</a>
+        <a class="nav-link" href="pokemon-list/add">Add</a>
+        <a class="nav-link" href="/edit">Edit</a>
+      </div>
+    </div>
+  </div>
+</nav>
+<!-- Main Content -->
+<main>
+    <div class="container">
+        <div class ="row">
+            <div class ="col-mid-offset-3 col-md-10">
+            <h1><%= title %></h1>
+            <br>
+            <table class = "table table-bordered table-striped table-hover">
+        <tr>
+        <th class="text-center col-2">Name</th>
+        <th class="text-center col-1">Type1</th>
+        <th class="text-center col-1">Type2</th>
+        <th class="text-center col-4">Notes</th>
+        </tr>
+        <% for(let count= 0;count<Pokemonlist.length; count++) { %>
+            <tr>
+                <td class="text-center col-2"><%= Pokemonlist[count].name %></td>
+                <td class="text-center col-1"><%= Pokemonlist[count].type1 %></td>
+                <td class="text-center col-1"><%= Pokemonlist[count].type2 %></td>
+                <td class="text-center col-4"><%= Pokemonlist[count].notes %></td>
+                <td class="text-center col-1">
+                  <a href="/pokemon-list/edit/<%= Pokemonlist[count]._id%>"
+                    class="btn btn-primary">
+                    <i class = "fas fa-pencil-alt"></i>Edit</a>
+                </td>
+                <td class="text-center col-1">
+                  <a href="/pokemon-list/delete/<%= Pokemonlist[count]._id%>"
+                    class="btn btn-danger">
+                    <i class = "fas fa-trash-alt"></i>Delete</a>
+                </td>
+
+            </tr>
+        <% } %>
+            </table>
+        </div>
+    </div>
+</main>
+<!-- Footer -->
+<script src="/javascripts/app.js"></script>
+<!-- Footer -->
+<footer class="bg-dark text-center text-white">
+  <div class="bg-dark text-center text-white">
+    <!-- Grid container -->
+    <div class="container p-4">
+      <!-- Section: Social media -->
+      <section class="mb-4">
+
+        <!-- Linkedin -->
+        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+          ><i class="fab fa-linkedin-in"></i
+        ></a>
+
+        <!-- Github -->
+        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+          ><i class="fab fa-github"></i
+        ></a>
+      </section>
+
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      © 2020 Copyright: Jevin Chen
+    </div>
+    <!-- Copyright -->
+</footer>
+<!-- Footer -->

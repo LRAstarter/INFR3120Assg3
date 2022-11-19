@@ -1,0 +1,96 @@
+
+
+<link rel="stylesheet" href="/bootstrap/dist/css/bootstrap.min.css"/>
+<link rel="stylesheet" href="/stylesheets/monStyle.css"/>
+<nav class="navbar navbar-expand-lg " style ="background-color: #f4000f;">
+  <div class="container-fluid">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-link active" aria-current="page" href="/pokemon-list">Home</a>
+        <a class="nav-link" href="pokemon-list/add">Add</a>
+        <a class="nav-link" href="/edit">Edit</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<div class ="container">
+    <div class = "row">
+        <div class ="col-md-offset-3 col-md-6">
+            <h1><%= title %></h1>
+            <form class="form" method="post">
+                <div class="form-group">
+                    <label for="NameTextField">Pokemon Name</label>
+                    <input type = "text" class = "form-control"
+                    id="nameTextField"
+                    placeholder="Enter the Pokemon Name"
+                    name="name"
+                    value ="<%= pokemon.name %>"
+                    required>
+                </div>
+                <div class="form-group">
+                    <label for="Type1TextField">First Type</label>
+                    <input type = "text" class = "form-control"
+                    id="Type1TextField"
+                    placeholder="Enter the first type of Pokemon"
+                    name="type1" 
+                    value ="<%= pokemon.type1 %>"
+                    required>
+                </div>
+                <div class="form-group">
+                    <label for="Type2TextField">Second Type</label>
+                    <input type = "text" class = "form-control"
+                    id="Type2TextField"
+                    placeholder="Enter the second type of Pokemon (if none type in N/A)"
+                    name="type2" 
+                    value ="<%= pokemon.type2 %>"
+                    required>
+                </div>
+                <div class="form-group">
+                    <label form="NoteTextField">Extra Notes</label>
+                    <textarea type = "text" class = "form-control"
+                    id="NoteTextField"
+                    placeholder="Any Extra notes go here"
+                    name="notes" required>
+                    <%= pokemon.notes %>
+                    </textarea>
+                </div>
+                <br>
+            <button class ="btn-btn-primary" type = "submit">
+                <i class = "fas fa-edit"></i>Submit
+            </button>
+
+            </form
+        </div>
+    </div>
+</div>
+<!-- Footer -->
+<script src="/javascripts/app.js"></script>
+<!-- Footer -->
+<footer class="bg-dark text-center text-white">
+  <div class="bg-dark text-center text-white">
+    <!-- Grid container -->
+    <div class="container p-4">
+      <!-- Section: Social media -->
+      <section class="mb-4">
+
+        <!-- Linkedin -->
+        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+          ><i class="fab fa-linkedin-in"></i
+        ></a>
+
+        <!-- Github -->
+        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+          ><i class="fab fa-github"></i
+        ></a>
+      </section>
+
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      © 2020 Copyright: Jevin Chen
+    </div>
+    <!-- Copyright -->
+</footer>
+<!-- Footer -->

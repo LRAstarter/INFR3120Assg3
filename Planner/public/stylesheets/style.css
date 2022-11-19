@@ -1,8 +1,26 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+.center-on-page {
+  
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
 }
 
-a {
-  color: #00B7FF;
+/* Poké Styles */
+.pokeball {
+  margin: auto;
+  width: 30px;
+  height: 30px;
+  transition: all .3s;
+  -moz-transform: all .3s;
+  -webkit-transform: all .3s;
+}
+
+#pokeball:hover {
+  transform: scale(1.4);
+  -webkit-transform: scale(1.4);
+  -ms-transform: scale(1.4);
+  -moz-transform: scale(1.4);
+  -o-transform: scale(1.4);
+  
 }
